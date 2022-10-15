@@ -1,0 +1,81 @@
+.project_main {
+    display: flex;
+    padding-top: 5em;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project_banner_text {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding-top: 1em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.project_banner_text>p {
+    font-size: 3rem;
+}
+
+.project_main>p {
+    font-size: 2.5rem;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    justify-content: space-around;
+}
+
+.parallax_project {
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("../../images/project.jpg");
+}
+
+@media only screen and (min-width: 700px) {
+    .project_items_ {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .project_banner_text>p {
+        font-size: 4rem;
+    }
+
+    .project_main>p {
+        font-size: 4rem;
+    }
+
+    .parallax_project {
+        min-height: 400px;
+    }
+
+    .button {
+        margin-top: 3em;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .project_items_ {
+        max-width: 900px;
+    }
+
+    .project_main>p {
+        font-size: 5rem;
+    }
+
+    .parallax_project {
+        min-height: 500px;
+    }
+
+    .project_banner_text>p {
+        font-size: 8rem;
+    }
+}

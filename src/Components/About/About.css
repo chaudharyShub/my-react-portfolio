@@ -1,0 +1,94 @@
+.about_main {
+    display: flex;
+    padding-top: 5em;
+    text-align: center;
+    flex-direction: column;
+}
+
+.about_main>p {
+    font-size: 2.5rem;
+}
+
+.about_banner_text {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding-top: 1em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.about_banner_text>p {
+    font-size: 3rem;
+}
+
+.about_text>p {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.about_text {
+    margin-bottom: 2em;
+}
+
+marquee {
+    margin-bottom: 5em;
+}
+
+.parallax_about {
+    min-height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("../../images/hero.jpg");
+}
+
+marquee img {
+    width: 4rem;
+    margin: 5px auto;
+}
+
+@media only screen and (min-width: 700px) {
+    .about_main>p {
+        font-size: 4rem;
+    }
+
+    .about_text {
+        width: 700px;
+        margin: 0 auto;
+        margin-bottom: 5em;
+    }
+
+    .about_text p {
+        word-spacing: 2px;
+        line-height: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .parallax_about {
+        min-height: 400px;
+    }
+
+    .about_banner_text>p {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .about_text {
+        width: 900px;
+    }
+
+    .about_main>p {
+        font-size: 5rem;
+    }
+
+    .parallax_about {
+        min-height: 550px;
+    }
+
+    .about_banner_text>p {
+        font-size: 8rem;
+    }
+}

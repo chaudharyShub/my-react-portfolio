@@ -1,0 +1,90 @@
+.home_main {
+    margin-top: -6px;
+    padding-bottom: 3em;
+}
+
+.welcome_text {
+    cursor: default;
+    position: relative;
+    display: inline-block;
+}
+
+.welcome_text>p {
+    margin-top: 1em;
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+.welcome_text>p::after {
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    content: '';
+    width: 100%;
+    position: absolute;
+    transform: scaleX(0);
+    background-color: #0087ca;
+    transform-origin: bottom left;
+    transition: transform 0.4s ease-out;
+}
+
+.welcome_text>p:hover:after {
+    transform: scaleX(1);
+}
+
+.lower_title {
+    padding: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lower_title img {
+    width: 3em;
+    cursor: pointer;
+    animation: moveArrowY 1s alternate-reverse infinite;
+}
+
+.parallax_home {
+    min-height: 300px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../../images/hero.jpg");
+}
+
+@keyframes moveArrowY {
+    from {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(20px)
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .parallax_home {
+        min-height: 400px;
+    }
+
+    .welcome_text>p {
+        margin-top: 1em;
+        word-spacing: 5px;
+        font-size: 1.5rem;
+        letter-spacing: 10px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .parallax_home {
+        min-height: 550px;
+    }
+
+    .welcome_text>p {
+        margin-top: 1em;
+        font-size: 2rem;
+        word-spacing: 5px;
+        letter-spacing: 10px;
+    }
+}

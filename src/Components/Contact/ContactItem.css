@@ -1,0 +1,28 @@
+.contactItem_main {
+    width: 18em;
+    padding: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: .20s ease;
+    flex-direction: column;
+}
+
+.contactItem_main:hover {
+    box-shadow: 6px 6px 10px #888888;
+}
+
+@media only screen and (min-width: 700px) {    
+    .contactItem_main {
+        width: 80%;
+        margin: 0 1em;
+    }
+}
+
+@media only screen and (min-width: 1000px) {    
+    .contactItem_main {
+        width: 100%;
+        margin: 1em auto;
+    }
+}

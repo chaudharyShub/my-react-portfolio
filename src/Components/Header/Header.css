@@ -1,0 +1,42 @@
+.header_main {
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    position: sticky;
+}
+
+.list_ a {
+    margin: 0 1em;
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+
+#logo_ {
+    cursor: pointer;
+    transition: .20s ease;
+}
+
+.toggle_switch {
+    display: flex;
+    margin-left: 1em;
+    flex-direction: row;
+    align-items: center;
+}
+
+.example-spacer {
+    width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+    .example-spacer {
+        flex: 1 1 auto;
+        width: 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+}
