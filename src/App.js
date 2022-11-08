@@ -36,8 +36,8 @@ function App() {
         loaderSpeed={450}
         progress={progress}
       />
-      <Header />
       <Home />
+      <Header />
       <About />
       <Project />
       <Contact />

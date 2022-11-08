@@ -1,7 +1,7 @@
-import './Footer.css';
 import React, { useState } from 'react';
-import { footerItems } from '../Details.js';
 import { useStateValue } from '../Context/StateProvider';
+import { footerItems } from '../Details.js';
+import './Footer.css';
 
 function Footer() {
 
@@ -30,13 +30,16 @@ function Footer() {
     border: '2px solid white'
   };
   // Dark Mode Ends
+
   return (
     <div className='footer_main' style={mode === true ? dark : light}>
       <div className="footer_link">
         {
-          footerItems.map(element => (
+          footerItems.map((element, index) => (
 
-            <div className="link"
+            <div
+              key={index}
+              className="link"
               onMouseEnter={() => setHover(element.id)}
               onMouseLeave={() => setHover(-1)}
 
@@ -55,7 +58,6 @@ function Footer() {
                 <p style={mode === true ? dark : light}>{element.name}</p>
               </a>
             </div>
-
           ))
         }
       </div>

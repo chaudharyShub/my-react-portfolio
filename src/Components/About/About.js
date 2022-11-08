@@ -1,8 +1,6 @@
+import { useStateValue } from '../Context/StateProvider';
+import WorkExperience from '../WorkExperience/WorkExperience';
 import './About.css';
-import React from 'react';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
 import js from '../../images/languages/js.png';
 import cpp from '../../images/languages/cpp.png';
 import css from '../../images/languages/css.png';
@@ -11,8 +9,7 @@ import My_Resume from '../../images/My_Resume.pdf';
 import react from '../../images/languages/react.png';
 import python from '../../images/languages/python.png';
 import angular from '../../images/languages/angular.png';
-import { useStateValue } from '../Context/StateProvider';
-import bootstrap from '../../images/languages/bootstrap.png';
+import tailwind from '../../images/languages/tailwind.svg';
 
 function About() {
 
@@ -26,6 +23,12 @@ function About() {
     color: 'black',
     backgroundColor: "rgb(241, 241, 241)"
   };
+  const btnStyleDark = {
+    backgroundColor: '#ffc107',
+    border: '2px solid #ffc107'
+  };
+
+  const rightMarqueeContent = [js, cpp, css, html, react, python, angular, tailwind, js, cpp, css];
 
   return (
     <>
@@ -37,35 +40,33 @@ function About() {
       </div>
       <div className="about_main" id='about' style={mode === true ? dark : light}>
         <p>About Me</p>
-        <div className="about_text">
-          <p>
-            I am a Front-End Developer. My first working experience was of a mechanical engineer, I enjoyed that and learnt a lot. But because of my increasing interest in creating and designing the web, I decided to switch my working from mechanical to web developing and to achieve that I improved my techanical skills and learnt some programming languages <strong>=&#62;</strong> <br /> HTML, CSS, JavaScript, REACT.JS, ANGULAR, C++, PYTHON, BOOTSTRAP <br /> and started my new journey as a front-end web developer.
-          </p>
-          <Button className='my-3' variant={mode === true ? "warning" : "info"} href={My_Resume} download>Download Resume</Button>
+        <div className='about_left_right_parent'>
+          <div className='about_left_container'>
+            <div className="about_text">
+              <p className='paragraph_text'>
+                I am a Front-End Developer. My first working experience was of a mechanical engineer, I enjoyed that and learnt a lot. But because of my increasing interest in creating and designing the web, I decided to switch my career from mechanical to web development and to achieve that I improved my techanical skills and learnt some programming languages <strong>=&#62;</strong> <span>HTML, CSS, JavaScript, REACT.JS, ANGULAR, C++, PYTHON, TAILWIND</span> and started my new journey as a front-end web developer.
+              </p>
+              <div className='download_button'>
+                <a className='inner_button' style={mode === true ? btnStyleDark : {}} href={My_Resume} download>Download Resume</a>
+              </div>
+            </div>
+          </div>
+          <div className='about_right_container'>
+            <div className='about_work_experience'>
+              <WorkExperience />
+            </div>
+          </div>
         </div>
-        <marquee behavior="scroll" direction="left" scrollamount="4" loop="infinite">
-          <Row>
-            <Col><span></span></Col>
-            <Col><img src={angular} alt="angular-icon" /></Col>
-            <Col><span></span></Col>
-            <Col><img src={css} alt="css-icon" /></Col>
-            <Col><span></span></Col>
-            <Col><img src={python} alt="python-icon" /></Col>
-          </Row>
-          <Row>
-            <Col><img src={react} alt="react-icon" /></Col>
-            <Col><span></span></Col>
-            <Col><img src={js} alt="js-icon" /></Col>
-            <Col><span></span></Col>
-            <Col><span></span></Col>
-            <Col><img src={bootstrap} alt="bootstrap-icon" /></Col>
-            <Col><span></span></Col>
-          </Row>
-          <Row>
-            <Col><img src={html} alt="html-icon" /></Col>
-            <Col><img src={cpp} alt="cpp-icon" /></Col>
-          </Row>
-        </marquee>
+        <div className='marquee'>
+          <ul className='marquee_content_left'>
+            {
+              rightMarqueeContent.map((element, index) =>
+                <li key={index}>
+                  <img className='companyLogo' src={element} />
+                </li>)
+            }
+          </ul>
+        </div>
       </div>
     </>
   );

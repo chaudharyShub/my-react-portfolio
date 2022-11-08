@@ -5,9 +5,9 @@ import facebook from '../images/facebook.png';
 import linkedin from '../images/linkedin.png';
 import instagram from '../images/instagram.png';
 import messenger from '../images/messenger.png';
-import amazon_blur from '../images/amazon_blur.png';
 import postmaster_img from '../images/postmaster_img.png';
 import react_portfolio from '../images/react_portfolio.png';
+import algoexpert_clone from '../images/algoexpert_clone.png';
 
 
 export const contactArray = [
@@ -37,34 +37,42 @@ export const projectsArray = [
         "id": "1",
         "title": "My React Portfolio",
         "img": react_portfolio,
-        "description": "This is my professional portfolio website (responsive) built on latest JavaScript based front-end technology called React.JS. It supports DARK & LIGHT mode, created using React Context API to transfer data throughout the app.",
+        "description": "This is my professional portfolio website built on latest JavaScript based front-end technology called React.JS. It supports DARK & LIGHT mode, created using React Context API.",
         "tech_stack": "React.JS, CSS",
         "href": "http://chaudharyshubham.com"
     },
     {
         "id": "2",
+        "title": "AlgoExpert Clone",
+        "img": algoexpert_clone,
+        "description": "Created a clone website of online Interview preparing platform 'AlgoExpert.io' on React.JS and styled using custom CSS",
+        "tech_stack": "React.JS, CSS",
+        "href": "https://chaudharyshub.github.io/AlgoExpert-CLone-React.Js/"
+    },
+    {
+        "id": "3",
         "title": "Indian Shatabdi News",
         "img": news_img,
-        "description": "This is a news website (responsive ) which gets latest news updates from 'ABC News', 'BBC News' and 'The Verge' fetched from an api provided by 'News API' using JavaScript's AJAX method.",
+        "description": "This is a news website which gets latest news updates from 'ABC News', 'BBC News' and 'The Verge' fetched from an api provided by 'News API' using JavaScript's AJAX method.",
         "tech_stack": "HTML, CSS & JavaScript",
         "href": "http://www.chaudharyshubham.com/Indian%20Shatabdi%20news/index%20(news).html"
     },
     {
-        "id": "3",
+        "id": "4",
         "title": "PostMaster",
         "img": postmaster_img,
         "description": "This project is inspired from 'Post Man'. PostMaster is an utility platform which can make 'GET' and 'POST' requests on the api using JavaScript's Fetch Api method. It accepts JSON format / custom parameters as input.",
         "tech_stack": "Bootstrap & JavaScript",
         "href": "http://www.chaudharyshubham.com/Postmaster/index%20(postmaster).html"
     },
-    {
-        "id": "4",
-        "title": "Amazon Clone",
-        "img": amazon_blur,
-        "description": "comming soon...",
-        "tech_stack": "React.JS",
-        "href": "disabled" // DISABLED
-    },
+    // {
+    //     "id": "5",
+    //     "title": "Amazon Clone",
+    //     "img": amazon_blur,
+    //     "description": "comming soon...",
+    //     "tech_stack": "React.JS",
+    //     "href": "disabled" // DISABLED
+    // },
 ];
 
 

@@ -1,5 +1,6 @@
 .banner {
     z-index: -1;
+    overflow: hidden;
     color: white;
     position: relative;
     text-align: center;

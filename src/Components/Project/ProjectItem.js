@@ -1,8 +1,6 @@
 import React from 'react';
-import './ProjectItem.css';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import { useStateValue } from '../Context/StateProvider';
+import './ProjectItem.css';
 
 function ProjectItem({ img, title, desc, tech_stack, href }) {
 
@@ -19,16 +17,18 @@ function ProjectItem({ img, title, desc, tech_stack, href }) {
   };
 
   return (
-    <div className="my-3">
-      <Card className="projectItem_main" style={mode === true ? dark : light}>
-        <Card.Img variant="top" src={img} />
-        <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text> {desc} </Card.Text>
-          <Card.Text><strong>Tech. Stack:</strong> {tech_stack} </Card.Text>
-          <Button variant="dark" disabled={true ? href === "disabled" : false} href={href} target="_blank">View Live &#8599;</Button>
-        </Card.Body>
-      </Card>
+    <div className='projectItem_main' style={mode === true ? dark : light}>
+      <div className="card_container">
+        <img src={img} />
+        <div className='card_text_container'>
+          <h2>{title}</h2>
+          <p className='paragraph_project'>{desc}</p>
+          <div className="button_desc">
+            <p><strong>Tech. Stack:</strong> {tech_stack} </p>
+            <a className={`btn ${mode === true ? 'btn-info' : 'btn-dark'}`} href={href} target="_blank">View Live &#8599;</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

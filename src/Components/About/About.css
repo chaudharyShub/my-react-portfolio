@@ -9,6 +9,30 @@
     font-size: 2.5rem;
 }
 
+.about_left_right_parent {
+    /* border: 2px solid black; */
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em 0 4em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.about_left_container {
+    /* border: 2px solid blue; */
+}
+
+.about_right_container {
+    /* border: 2px solid red; */
+}
+
+.about_work_experience {
+    /* border: 2px solid green; */
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .about_banner_text {
     top: 50%;
     left: 50%;
@@ -22,18 +46,73 @@
     font-size: 3rem;
 }
 
-.about_text>p {
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
 .about_text {
-    margin-bottom: 2em;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    max-width: 500px;
 }
 
-marquee {
+.paragraph_text {
+    margin: 1em 1em 0 1em;
+    text-align: justify;
+    font-size: 17px !important;
+    letter-spacing: 1px !important;
+    line-height: 2rem !important;
+}
+
+.paragraph_text span {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.download_button {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.marquee {
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
     margin-bottom: 5em;
+    margin-top: 2em;
+}
+
+.marquee_content_left {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100%;
+    list-style: none;
+    height: 100%;
+    animation: scrollingLeft 50s linear infinite;
+    height: 16em;
+}
+
+.marquee_content_left li {
+    width: 30vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.marquee_content_left li:nth-child(even) {
+    padding-top: 7em;
+}
+
+.marquee_content_left li:nth-child(odd) {
+    padding-bottom: 7em;
+}
+
+.companyLogo {
+    width: 6em;
+    transition: 0.2s ease;
+}
+
+.companyLogo:hover {
+    scale: 1.15;
 }
 
 .parallax_about {
@@ -42,6 +121,43 @@ marquee {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: url("../../images/hero.jpg");
+}
+
+.inner_button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 17px;
+    border-radius: 5px;
+    border: 2px solid #02203c;
+    margin-top: -10px;
+    width: 10em;
+    margin: 3em auto 1em auto;
+    color: #02203c;
+
+    /* ANIMATION */
+    background: linear-gradient(to right, #02203c 50%, rgb(241, 241, 241) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: 0.35s ease;
+}
+
+.inner_button:hover {
+    background-position: left bottom;
+    border: 2px solid #02203c;
+    color: white;
+}
+
+@keyframes scrollingLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-180vw);
+    }
 }
 
 marquee img {
@@ -55,12 +171,10 @@ marquee img {
     }
 
     .about_text {
-        width: 700px;
-        margin: 0 auto;
-        margin-bottom: 5em;
+        max-width: 700px;
     }
 
-    .about_text p {
+    .about_left_right_parent p {
         word-spacing: 2px;
         line-height: 2rem;
         font-size: 1.3rem;
@@ -73,11 +187,16 @@ marquee img {
     .about_banner_text>p {
         font-size: 4rem;
     }
+
+    .inner_button {
+        margin: 5em auto;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
     .about_text {
-        width: 900px;
+        max-width: 500px;
+        margin-bottom: 10em;
     }
 
     .about_main>p {
@@ -90,5 +209,25 @@ marquee img {
 
     .about_banner_text>p {
         font-size: 8rem;
+    }
+
+    .about_left_right_parent {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .about_left_container {
+        width: 50%;
+        position: relative;
+    }
+
+    .about_right_container {
+        width: 50%;
+    }
+
+    .inner_button {
+        position: absolute;
+        right: 0;
+        transform: translateX(50%);
     }
 }

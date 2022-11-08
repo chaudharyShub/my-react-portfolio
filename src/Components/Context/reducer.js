@@ -7,10 +7,12 @@ const reducer = (state, action) => {
     switch (action.type) {
         case "ENABLE_DARK_MODE":
             return {
+                ...state,
                 mode: true
             };
         case "ENABLE_LIGHT_MODE":
             return {
+                ...state,
                 mode: false
             };
     };
