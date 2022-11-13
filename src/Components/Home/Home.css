@@ -7,6 +7,7 @@
 
 svg {
     width: 100%;
+    filter: drop-shadow(5px 5px rgba(220, 20, 60, 0.526));
 }
 
 .filled-heading {
@@ -42,6 +43,7 @@ svg {
     width: 3em;
     cursor: pointer;
     animation: moveArrowY 1s alternate-reverse infinite;
+    filter: drop-shadow(10px 10px 4px #4444dd);
 }
 
 .parallax_home {
@@ -93,5 +95,9 @@ svg {
 @media only screen and (min-width: 1000px) {
     .parallax_home {
         min-height: 550px;
+    }
+
+    .filled-heading {
+        font-size: 4.5rem;
     }
 }
