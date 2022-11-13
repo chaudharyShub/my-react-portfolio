@@ -1,43 +1,41 @@
 .home_main {
     margin-top: -6px;
-    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0 0 0;
 }
 
-.welcome_text {
-    cursor: default;
-    position: relative;
-    display: inline-block;
-}
-
-.welcome_text>p {
-    margin-top: 1em;
-    margin-left: 5px;
-    font-weight: 400;
-    font-size: 1.5rem;
-    letter-spacing: 5px;
-}
-
-.welcome_text>p::after {
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    content: '';
+svg {
     width: 100%;
-    position: absolute;
-    transform: scaleX(0);
-    background-color: #0087ca;
-    transform-origin: bottom left;
-    transition: transform 0.4s ease-out;
 }
 
-.welcome_text>p:hover:after {
-    transform: scaleX(1);
+.filled-heading {
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#background path {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+}
+
+#background path:nth-of-type(2n) {
+    animation: rotate 20s linear infinite;
+}
+
+#background path:nth-of-type(2n + 1) {
+    animation: rotate 30s linear reverse infinite;
 }
 
 .lower_title {
-    padding: 2em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 0 4em 0;
 }
 
 .lower_title img {
@@ -63,28 +61,37 @@
     }
 }
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media only screen and (min-width: 700px) {
     .parallax_home {
         min-height: 400px;
     }
 
-    .welcome_text>p {
-        margin-top: 1em;
-        word-spacing: 5px;
-        font-size: 1.5rem;
-        letter-spacing: 10px;
+    .home_main {
+        flex-direction: row;
+        padding: 5em 0 2em 0;
+    }
+
+    svg {
+        width: 80%;
+    }
+
+    .lower_title img {
+        width: 4em;
     }
 }
 
 @media only screen and (min-width: 1000px) {
     .parallax_home {
         min-height: 550px;
-    }
-
-    .welcome_text>p {
-        margin-top: 1em;
-        font-size: 2rem;
-        word-spacing: 5px;
-        letter-spacing: 10px;
     }
 }

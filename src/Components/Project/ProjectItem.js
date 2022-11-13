@@ -17,15 +17,22 @@ function ProjectItem({ img, title, desc, tech_stack, href }) {
   };
 
   return (
-    <div className='projectItem_main' style={mode === true ? dark : light}>
+    <div className='projectItem_main' style={mode ? dark : light}>
       <div className="card_container">
         <img src={img} />
         <div className='card_text_container'>
           <h2>{title}</h2>
           <p className='paragraph_project'>{desc}</p>
           <div className="button_desc">
-            <p><strong>Tech. Stack:</strong> {tech_stack} </p>
-            <a className={`btn ${mode === true ? 'btn-info' : 'btn-dark'}`} href={href} target="_blank">View Live &#8599;</a>
+            <p>
+              <strong>Tech. Stack:</strong> {tech_stack}
+            </p>
+            <a
+              className={`btn ${mode ? 'btn-info' : 'btn-dark'}`}
+              href={href}
+              target="_blank"
+            >View Live &#8599;
+            </a>
           </div>
         </div>
       </div>

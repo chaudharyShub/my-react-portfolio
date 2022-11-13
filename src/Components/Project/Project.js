@@ -42,7 +42,7 @@ function Project() {
         </div>
       </div>
       <div id='projects'>
-        <div className='project_main' style={mode === true ? dark : light}>
+        <div className='project_main' style={mode ? dark : light}>
           <p>Recent Projects</p>
           <div className="project_items_">
             {
@@ -59,9 +59,23 @@ function Project() {
             }
           </div>
           <div className="button">
-            <Button variant={mode === true ? "warning" : "dark"} disabled={true ? page <= 1 : false} onClick={() => { setPage(page - 1) }}>&larr; Previous</Button>
-            <p> <strong>Page: </strong>{page} of {(projectsArray.length) / 2} </p>
-            <Button variant={mode === true ? "warning" : "dark"} disabled={true ? page > 1 : false} onClick={() => { setPage(page + 1) }}>Next &rarr;</Button>
+            <Button
+              variant={mode ? "warning" : "dark"}
+              disabled={true ? page <= 1 : false}
+              onClick={() => { setPage(prevPage => prevPage - 1) }}
+            >&larr; Previous
+            </Button>
+
+            <p>
+              <strong>Page: </strong>{page} of {(projectsArray.length) / 2}
+            </p>
+
+            <Button
+              variant={mode ? "warning" : "dark"}
+              disabled={true ? page > 1 : false}
+              onClick={() => { setPage(prevPage => prevPage + 1) }}
+            >Next &rarr;
+            </Button>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ function Header() {
   const [innerText, setInnerText] = useState('Dark');
 
   const changeTheme = () => {
-    if (mode === true) {
+    if (mode) {
       dispatch({
         type: "ENABLE_LIGHT_MODE"
       });
@@ -40,17 +40,17 @@ function Header() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        bg={mode === true ? "dark" : "light"}
-        variant={mode === true ? "dark" : "light"}
+        bg={mode ? "dark" : "light"}
+        variant={mode ? "dark" : "light"}
       >
         <Container>
           <Link to="home" smooth={true} duration={0} offset={-100}>
-            <Navbar.Brand id='logo_'>&lt;Shubham Chaudhary /&gt;</Navbar.Brand>
+            <Navbar.Brand id='logo_'>Shubham Chaudhary</Navbar.Brand>
           </Link>
           <span className="example-spacer"></span>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" className='list_'>
-            <Nav style={mode === true ? dark : light}>
+            <Nav style={mode ? dark : light}>
               <Link to="home" spy={true} smooth={true} duration={0} offset={-100}>Home</Link>
               <Link to="about" spy={true} smooth={true} duration={0} offset={-50}>About</Link>
               <Link to="projects" spy={true} smooth={true} duration={0} offset={-50}>Projects</Link>
@@ -60,7 +60,7 @@ function Header() {
                   type="switch"
                   id="custom-switch"
                   label={innerText}
-                  style={mode === true ? { "color": "white" } : { "color": "black" }}
+                  style={mode ? { "color": "white" } : { "color": "black" }}
                   className='toggle_switch'
                   onClick={changeTheme}
                 />
