@@ -67,12 +67,12 @@ function Project() {
             </Button>
 
             <p>
-              <strong>Page: </strong>{page} of {(projectsArray.length) / 2}
+              <strong>Page: </strong>{page} of {Math.ceil(projectsArray.length / 2)}
             </p>
 
             <Button
               variant={mode ? "warning" : "dark"}
-              disabled={true ? page > 1 : false}
+              disabled={true ? page > 2 : false}
               onClick={() => { setPage(prevPage => prevPage + 1) }}
             >Next &rarr;
             </Button>

@@ -8,6 +8,7 @@ import messenger from '../images/messenger.png';
 import postmaster_img from '../images/postmaster_img.png';
 import react_portfolio from '../images/react_portfolio.png';
 import algoexpert_clone from '../images/algoexpert_clone.png';
+import form_validation from '../images/form_validation.png';
 
 
 export const contactArray = [
@@ -51,6 +52,14 @@ export const projectsArray = [
     },
     {
         "id": "3",
+        "title": "Form Validation APP",
+        "img": form_validation,
+        "description": "This project is inspired from 'Google Forms'. This app is created using React.JS and form validation in applied by using Vanilla JavaScript.",
+        "tech_stack": "Bootstrap & React.JS",
+        "href": "https://chaudharyshub.github.io/Form-Validation-using-JavaScript/"
+    },
+    {
+        "id": "4",
         "title": "Indian Shatabdi News",
         "img": news_img,
         "description": "This is a news website which gets latest news updates from 'ABC News', 'BBC News' and 'The Verge' fetched from an api provided by 'News API' using JavaScript's AJAX method.",
@@ -58,7 +67,7 @@ export const projectsArray = [
         "href": "http://www.chaudharyshubham.com/Indian%20Shatabdi%20news/index%20(news).html"
     },
     {
-        "id": "4",
+        "id": "5",
         "title": "PostMaster",
         "img": postmaster_img,
         "description": "This project is inspired from 'Post Man'. PostMaster is an utility platform which can make 'GET' and 'POST' requests on the api using JavaScript's Fetch Api method. It accepts JSON format / custom parameters as input.",
